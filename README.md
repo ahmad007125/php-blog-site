@@ -1,2 +1,16 @@
-# php-blog-site
-It's a platform for job seekers who needs to design a stunning cv/resume and it is totally free
+# How to Create a Blog PHP & MySQL database
+
+## PHP Blogging Website
+
+
+version: 1.0.0
+
+## TECHNOLOGIES
+
+1. PHP
+1. HTML & CSS
+1. JQuery AJAX
+1. Javascript
+1. Bootstrap 5
+
+## Authors
