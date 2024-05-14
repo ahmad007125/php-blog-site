@@ -7,14 +7,8 @@ img {
 	background: url("../img/welcome.jpg") center;
 	background-size: 100%;
 }
-.main-blog-card {
-	width: 90%;
-}
 .category-aside {
 	width: 100%;
-}
-.main-blog {
-	width: 70%;
 }
 .aside-main {
 	width: 30%;
