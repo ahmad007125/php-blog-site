@@ -14,4 +14,6 @@
 	 	</p>
 	 </div>
 </body>
+<script src="js/custom.js"></script>
+
 </html>

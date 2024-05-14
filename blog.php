@@ -7,24 +7,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
     }
   $notFound = 0;
  ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		<?php 
-		if(isset($_GET['search'])){ 
-			  echo "search '".htmlspecialchars($_GET['search'])."'"; 
-		}else{
-			echo "Blog Page";
-		} ?>
-	</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+ 
 	<?php 
       include 'inc/NavBar.php';
       include_once("admin/data/Post.php");
@@ -43,8 +26,23 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	 ?>
     
     <div class="container mt-5">
-    <section class="d-flex">
-    	 
+    <section class="blog-section">
+		<!-- <aside class="aside-main"> -->
+       	   <div class="category-aside d-flex flex-row gap-2">
+			  <a href="#" 
+			     class="list-group-item list-group-item-action active" 
+			     aria-current="true">
+			    Category
+			  </a>
+			  <?php foreach ($categories as $category ) { ?>
+			  <a href="category.php?category_id=<?=$category['id']?>" 
+			     class="list-group-item list-group-item-action">
+			  	<?php echo $category['category']; ?>
+			  </a>
+			  <?php } ?>
+			</div>
+       <!-- </aside> -->
+
   	   <?php if ($posts != 0) { ?>
   	   <main class="main-blog">
   	   	<h1 class="display-4 mb-4 fs-3">
@@ -119,24 +117,11 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
   	   		<?php } ?>
   	   	</main>
   	   <?php } ?>
-       <aside class="aside-main">
-       	   <div class="list-group category-aside">
-			  <a href="#" 
-			     class="list-group-item list-group-item-action active" 
-			     aria-current="true">
-			    Category
-			  </a>
-			  <?php foreach ($categories as $category ) { ?>
-			  <a href="category.php?category_id=<?=$category['id']?>" 
-			     class="list-group-item list-group-item-action">
-			  	<?php echo $category['category']; ?>
-			  </a>
-			  <?php } ?>
-			</div>
-       </aside>
+       
   </section>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
   
    <script>
    	 $(document).ready(function(){

@@ -50,7 +50,23 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
  	
 </h1>
   
-  <section class="d-flex">
+  <section class="blog-section">
+
+  <!-- <aside class="aside-main"> -->
+       	   <div class="category-aside d-flex flex-row gap-2">
+			  <a href="#" 
+			     class="list-group-item list-group-item-action active" 
+			     aria-current="true">
+			    Category
+			  </a>
+			  <?php foreach ($categories5 as $category ) { ?>
+			  <a href="category.php?category_id=<?=$category['id']?>" 
+			  	 class="list-group-item list-group-item-action">
+			  	<?php echo $category['category']; ?>
+			  </a>
+			  <?php } ?>
+			</div>
+       <!-- </aside> -->
   	<?php if (!isset($_GET['category_id'])) { ?>
   	   <main class="main-blog p-2">
   	   	  <div class="list-group category-aside">
@@ -128,21 +144,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	  		</div>
   	    </main>
   	<?php } } ?>
-       <aside class="aside-main">
-       	   <div class="list-group category-aside">
-			  <a href="#" 
-			     class="list-group-item list-group-item-action active" 
-			     aria-current="true">
-			    Category
-			  </a>
-			  <?php foreach ($categories5 as $category ) { ?>
-			  <a href="category.php?category_id=<?=$category['id']?>" 
-			  	 class="list-group-item list-group-item-action">
-			  	<?php echo $category['category']; ?>
-			  </a>
-			  <?php } ?>
-			</div>
-       </aside>
   </section>
 
     </div>
