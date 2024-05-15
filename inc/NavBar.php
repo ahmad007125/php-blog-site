@@ -1,44 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="blog.php">
-    	<b>My<span style="color: #0088FF;">Blog</span>
-    	</b>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog.php">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" 
-             href="category.php">
-             Category</a>
-        </li>
-      </ul>
-      <form class="d-flex" 
-             role="search"
-             method="GET"
-             action="blog.php">
-        <input class="form-control me-2" 
-               type="search"
-               name="search" 
-               placeholder="Search" 
-               aria-label="Search">
-
-        <button class="btn btn-outline-success" 
-                type="submit">
-                Search</button>
-      </form>
-    </div>
-  </div>
-</nav> -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +10,23 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Your webpage content goes here -->
+<script>
+      // Function to extract page name from URL
+      function getPageName(url) {
+          var index = url.lastIndexOf('/') + 1;
+          var filenameWithExtension = url.substr(index);
+          var pageName = filenameWithExtension.split('.')[0];
+          return pageName;
+      }
+      // Get the current page URL
+      var currentPageUrl = window.location.href;
+
+      // Set the title based on the page URL
+      var pageTitle = getPageName(currentPageUrl);
+      document.title = pageTitle + ' | Resume Builer';
+  </script>
 
 	<div class="container-fluid header-container bg-blue p-0" id="header">
         <div class="container">
