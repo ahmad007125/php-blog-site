@@ -61,7 +61,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	<?php if ($posts != 0) { ?>
    <main class="main-blog">
    	<?php foreach ($posts as $post) { ?>
-   	   <div class="card main-blog-card mb-5">
+   	   <div class="card main-blog-card">
 	  <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title"><?=$post['post_title']?></h5>
@@ -70,7 +70,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
             $p = substr($p, 0, 200);               
 	     ?>
 	    <p class="card-text"><?=$p?>...</p>
-	    <a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-primary">Read more</a>
+	    <a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-success rounded">Read more</a>
 	    <hr>
         <div class="d-flex justify-content-between">
         	<div class="react-btns">

@@ -9,6 +9,7 @@ img {
 }
 .category-aside {
 	width: 100%;
+  overflow-x: auto;
 }
 .aside-main {
 	width: 30%;
@@ -407,4 +408,29 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 255, 255, .3);
   height: 14px;
   width: 1px;
+}
+.list-group-item {
+  border: 1px solid #59C174 !important;
+  border-radius: 50px !important;
+  text-align: center;
+  max-width: 150px;
+  min-width: 120px;
+}
+.list-group-item.active {
+  background-color: #59c174;
+  border-color: #59c174;
+  border-radius: 50px !important;
+  text-align: center;
+}
+.main-blog .card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+.main-blog .col-lg-4 {
+  margin-bottom: 25px;
+}
+.main-blog .col-lg-4 .card {
+  margin-bottom: 25px;
+  min-height: 100%;
 }

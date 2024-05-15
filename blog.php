@@ -57,7 +57,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 						}?></h1>
 				<?php foreach ($posts as $post) { ?>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="card main-blog-card mb-5">
+				<div class="card main-blog-card">
 					<img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title"><?=$post['post_title']?></h5>
@@ -66,9 +66,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 							$p = substr($p, 0, 200);               
 						?>
 						<p class="card-text"><?=$p?>...</p>
-						<a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-primary">Read more</a>
-						<hr>
-						<div class="d-flex justify-content-between">
+						<a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-success rounded">Read more</a>
+						<div class="d-flex justify-content-between d-none">
 							<div class="react-btns">
 							<?php 
 							$post_id = $post['post_id'];
@@ -120,7 +119,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 				<div class="row">
 					<?php foreach ($posts as $post) { ?>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="card main-blog-card mb-5">
+							<div class="card main-blog-card">
 							<img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title"><?=$post['post_title']?></h5>
@@ -129,9 +128,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 								$p = substr($p, 0, 200);               
 							?>
 							<p class="card-text"><?=$p?>...</p>
-							<a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-primary">Read more</a>
-							<hr>
-							<div class="d-flex justify-content-between">
+							<a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-success rounded">Read more</a>
+							<div class="d-flex justify-content-between d-none">
 								<div class="react-btns">
 								<?php 
 								$post_id = $post['post_id'];
@@ -185,7 +183,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 		</section>
 
     </div>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 

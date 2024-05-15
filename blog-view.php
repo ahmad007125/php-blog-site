@@ -29,13 +29,12 @@ if (isset($_GET['post_id'])) {
 
   	   <main class="main-blog">
 
-  	   	<div class="card main-blog-card mb-5">
+  	   	<div class="card main-blog-card">
 	  <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title"><?=$post['post_title']?></h5>
 	    <p class="card-text"><?=$post['post_text']?></p>
-	    <hr>
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between d-none">
 <div class="react-btns">
 	<?php 
 		$post_id = $post['post_id'];
@@ -97,7 +96,7 @@ if (isset($_GET['post_id'])) {
 	           value="<?=$id?>"
 	           hidden>
 	  </div>
-	  <button type="submit" class="btn btn-primary">Comment</button>
+	  <button type="submit" class="btn btn-success rounded">Comment</button>
 	</form> <hr>
        <div>
   	<div class="comments">
