@@ -14,31 +14,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
   $categories5 = get5Categoies($conn); 
   $category = 0;
  ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		<?php 
-           if (isset($_GET['category_id'])){
-           	   $c_id =$_GET['category_id'];
-           	   $category = getCategoryById($conn, $c_id); 
-               if ($category == 0) {
-                 echo "Blog Category Page";
-               }else {
-               	echo "Blog | ".$category['category'];
-               }
-           }else {
-              echo "Blog Category Page";
-           }
-		 ?>
-	</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
  <?php 
      include 'inc/NavBar.php';
   ?>
@@ -59,7 +34,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 			     aria-current="true">
 			    Category
 			  </a>
-			  <?php foreach ($categories5 as $category ) { ?>
+			  <?php //foreach ($categories5 as $category ) { ?>
+				<?php foreach ($categories as $category ) { ?>
 			  <a href="category.php?category_id=<?=$category['id']?>" 
 			  	 class="list-group-item list-group-item-action">
 			  	<?php echo $category['category']; ?>
@@ -85,7 +61,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	<?php if ($posts != 0) { ?>
    <main class="main-blog">
    	<?php foreach ($posts as $post) { ?>
-   	   <div class="card main-blog-card mb-5">
+   	   <div class="card main-blog-card">
 	  <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title"><?=$post['post_title']?></h5>
@@ -94,7 +70,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
             $p = substr($p, 0, 200);               
 	     ?>
 	    <p class="card-text"><?=$p?>...</p>
-	    <a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-primary">Read more</a>
+	    <a href="blog-view.php?post_id=<?=$post['post_id']?>" class="btn btn-success rounded">Read more</a>
 	    <hr>
         <div class="d-flex justify-content-between">
         	<div class="react-btns">
@@ -149,5 +125,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
     </div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

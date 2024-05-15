@@ -21,33 +21,20 @@ if (isset($_GET['post_id'])) {
 	     exit;
      }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blog - <?=$post['post_title']?></title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<?php 
-        include 'inc/NavBar.php';
-      ?>
+
+<?php include 'inc/NavBar.php'; ?>
     
     <div class="container mt-5">
     	 <section class="d-flex">
 
   	   <main class="main-blog">
 
-  	   	<div class="card main-blog-card mb-5">
+  	   	<div class="card main-blog-card">
 	  <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title"><?=$post['post_title']?></h5>
 	    <p class="card-text"><?=$post['post_text']?></p>
-	    <hr>
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between d-none">
 <div class="react-btns">
 	<?php 
 		$post_id = $post['post_id'];
@@ -109,7 +96,7 @@ if (isset($_GET['post_id'])) {
 	           value="<?=$id?>"
 	           hidden>
 	  </div>
-	  <button type="submit" class="btn btn-primary">Comment</button>
+	  <button type="submit" class="btn btn-success rounded">Comment</button>
 	</form> <hr>
        <div>
   	<div class="comments">
@@ -134,46 +121,34 @@ if (isset($_GET['post_id'])) {
   </div>
 
 </main>
-
-<aside class="aside-main">
-   <div class="list-group category-aside">
-	  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-	    Category
-	  </a>
-	  <?php foreach ($categories as $category ) { ?>
-	  <a href="category.php?category_id=<?=$category['id']?>"
-	     class="list-group-item list-group-item-action">
-	  	<?php echo $category['category']; ?>
-	  </a>
-	  <?php } ?>
-	</div>
-</aside>
 </section>
 </div>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
    <script>
-   	 $(document).ready(function(){
-			  $(".like-btn").click(function(){
-			     var post_id = $(this).attr('post-id');
-			     var liked = $(this).attr('liked');
+   	    $(document).ready(function(){
+			$(".like-btn").click(function(){
+			    var post_id = $(this).attr('post-id');
+			    var liked = $(this).attr('liked');
 
-			     if (liked == 1) {
-                 $(this).attr('liked', '0');
-                 $(this).removeClass('liked');
-			     }else {
-                 $(this).attr('liked', '1');
-                 $(this).addClass('liked');
-			     }
-			     $(this).next().load("ajax/like-unlike.php",
+			    if (liked == 1) {
+                $(this).attr('liked', '0');
+                $(this).removeClass('liked');
+			    }else {
+                $(this).attr('liked', '1');
+                $(this).addClass('liked');
+			    }
+			    $(this).next().load("ajax/like-unlike.php",
 			     	{
 			     		post_id: post_id
 			     	});
-			  });
-		  });
+			});
+		});
    </script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
 </body>
 </html>
 <?php }else {
