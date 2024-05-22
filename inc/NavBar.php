@@ -37,7 +37,7 @@
 			    </a>
                 <ul class="centered-nav d-flex align-items-center gap-lg-5 gap-md-4 gap-3 mb-0 ps-0 py-1 py-md-0 justify-content-md-center justify-content-around">
                     <li><a aria-current="page" href="index.php" class="link">Home</a></li><span class="y-divider d-md-none d-block"></span>
-                    <li><a href="#" class="link">Designs</a></li><span class="y-divider d-md-none d-block"></span>
+                    <li><a href="designs.php" class="link">Designs</a></li><span class="y-divider d-md-none d-block"></span>
                     <li><a href="blog.php" class="link">Blog</a></li><span class="y-divider d-md-none d-block"></span>
 
                     <?php  //if ($logged) { ?>

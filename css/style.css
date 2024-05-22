@@ -73,8 +73,8 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
 }
-body {
-  font-family: "Rubik", sans-serif;
+body, .main-blog * {
+  font-family: "Rubik", sans-serif !important;
   /*position: fixed;
   top: 0;
   left: 0;
@@ -462,6 +462,6 @@ h1, h2, h3, h4, h5, h6 {
 .main-blog .default-screen {
   text-align: center;
 }
-.main-blog .default-screen img {
+.default-screen img {
   height: 350px !important;
 }
