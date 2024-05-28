@@ -37,11 +37,11 @@
 			    </a>
                 <ul class="centered-nav d-flex align-items-center gap-lg-5 gap-md-4 gap-3 mb-0 ps-0 py-1 py-md-0 justify-content-md-center justify-content-around">
                     <li><a aria-current="page" href="index.php" class="link">Home</a></li><span class="y-divider d-md-none d-block"></span>
-                    <li><a href="#" class="link">Designs</a></li><span class="y-divider d-md-none d-block"></span>
+                    <li><a href="designs.php" class="link">Designs</a></li><span class="y-divider d-md-none d-block"></span>
                     <li><a href="blog.php" class="link">Blog</a></li><span class="y-divider d-md-none d-block"></span>
 
-                    <?php  if ($logged) { ?>
-                    <li class="nav-item dropdown">
+                    <?php  //if ($logged) { ?>
+                    <!-- <li class="nav-item dropdown">
                     	<a class="link dropdown-toggle" href="profile.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 	             			<i class="fa fa-user" aria-hidden="true"></i> 
 	           		 		@<?=$_SESSION['username']?>
@@ -51,12 +51,13 @@
 				            	<a class="dropdown-item" href="logout.php">Logout</a>
 				            </li>
 				        </ul>
-	      			</li>
-	      			<?php } else { ?> 
+	      			</li> -->
+	      			<?php //} else { ?> 
       				<li class="nav-item"> 
-      					<a class="link" href="login.php">Login | Signup</a>
+      					<!-- <a class="link" href="login.php">Login | Signup</a> -->
+      					<a class="link" href="#">About</a>
         			</li>
-	         		<?php } ?>
+	         		<?php //} ?>
 
                 </ul>
 

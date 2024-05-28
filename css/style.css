@@ -73,8 +73,8 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
 }
-body {
-  font-family: "Rubik", sans-serif;
+body, .main-blog * {
+  font-family: "Rubik", sans-serif !important;
   /*position: fixed;
   top: 0;
   left: 0;
@@ -426,6 +426,15 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, .125);
+}
+.main-blog .card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-blog .col-lg-4 {
   margin-bottom: 25px;
@@ -433,4 +442,44 @@ h1, h2, h3, h4, h5, h6 {
 .main-blog .col-lg-4 .card {
   margin-bottom: 25px;
   min-height: 100%;
+  background-color: #fff;
+  border: none;
+  transition: 300ms ease;
+  position: relative;
+}
+.main-blog .col-lg-4 .card:hover {
+  transform: translate(0px, -10px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.main-blog-card .btn-link {
+  text-decoration: none;
+  color: #59C174 !important;
+}
+.main-blog-card .btn-link span svg {
+  transition: 200ms ease;
+}
+.main-blog-card .btn-link svg {
+  transform: rotate(270deg);
+}
+.main-blog-card .btn-link:hover span svg {
+  transform: rotate(270deg) translateX(3px) translateY(3px); 
+}
+.main-blog-card {
+  border-radius: 20px;
+}
+.main-blog .default-screen {
+  text-align: center;
+}
+.default-screen img {
+  height: 350px !important;
+}
+
+.main-blog .col-lg-4:nth-child(-n+9) {
+  display: block;
+}
+.main-blog .col-lg-4 {
+  display: none;
+}
+.show-all .main-blog .col-lg-4 {
+  display: block !important;
 }
