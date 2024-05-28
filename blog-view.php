@@ -41,9 +41,10 @@ if (isset($_GET['post_id'])) {
 
 	  	   <main class="main-blog">
 		  	   <div class="card main-blog-card mb-5">
-				   <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
-				   <div class="card-body">
-				    	<h5 class="card-title"><?=$post['post_title']?></h5>
+				 	<h5 class="card-title"><?=$post['post_title']?></h5>
+					<p class="text"><?=$post['post_intro']?></p>
+				    <img src="upload/blog/<?=$post['cover_url']?>" class="card-img-top" alt="...">
+				    <div class="card-body">
 				    	<p class="card-text"><?=$post['post_text']?></p>     
 			  		</div>
 				</div>
@@ -112,7 +113,7 @@ if (isset($_GET['post_id'])) {
 		  });
    	</script> -->
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 
 </body>
