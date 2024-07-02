@@ -313,6 +313,9 @@ function printSection() {
     // Write custom CSS styles for printing
     var styles = `
         <style>
+            .page {
+                margin-top: 0;
+            }
             @page {
                 size: auto; 
                 margin: 0; 
