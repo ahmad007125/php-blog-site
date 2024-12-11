@@ -56,6 +56,11 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
 		  </div>
 
 		  <div class="mb-3">
+		    <label class="form-label">Post Intro</label>
+		  	<textarea name="post_intro" required></textarea>
+		  </div>
+
+		  <div class="mb-3">
 		    <label class="form-label">Cover Image</label>
 		    <input type="file" 
 		           class="form-control"

@@ -38,7 +38,7 @@
 		  </div>
 		  
 		  <button type="submit" class="btn btn-primary">Login</button>
-		  <a href="admin-login.php" class="link-secondary">Admin Login</a>
+		  <a href="owner-login.php" class="link-secondary">Admin Login</a>
 		  &nbsp;&nbsp;&nbsp;
 		  <a href="blog.php" class="link-secondary">Blog</a>
 		  &nbsp;&nbsp;&nbsp;

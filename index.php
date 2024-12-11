@@ -18,7 +18,7 @@
                     <p class="font-sm text-green text-uppercase">READY FOR RESUME</p>
                     <h1 class="banner-heading text-white mb-4">Design Your <br>Career Story</h1>
                     <p class="font-sm text-white mb-5">Experience the pinnacle of elegance and professionalism with our world-class design options. Tailored to impress and captivate, our templates cater to diverse tastes. Our dedicated design team ensures your resume shines with unparalleled aesthetics.</p>
-                    <a href="resume.html" class="btn btn-success rounded">Create CV</a>
+                    <a href="resume.php" class="btn btn-success rounded">Create CV</a>
                 </div>
                 <div class="col-md-6 col-xs-12 img-col">
                     <img src="images/banner-img.svg" class="img-fluid banner-img">
